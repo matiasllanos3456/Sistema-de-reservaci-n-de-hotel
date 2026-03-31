@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/FondoHotel.jpg");     
+    background-repeat: no-repeat;      /* Evita que la imagen se repita */
+    background-size: cover;            /* Ajusta la imagen para cubrir todo el espacio */
+    background-position: center;       /* Centra la imagen */
+    background-attachment: fixed;
+}
+.login-container {
+    width: 500px;
+    height: auto;
+    background-color: rgb(255, 125, 56);
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgb(77, 77, 77);
+}
+/* FORM */
+.form-registro {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #444;
+    height: 100%;
+    align-items: center;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex: 1;
+}
+
+label {
+    margin: 15px;
+}
+label > input {
+    border-radius: 20px;
+    padding: 7px;
+}
+.enter-button {
+    padding: 10px;
+    width: 50%;
+    border-radius: 20px;
+}
+h1 {
+    text-align: center;
+    border-radius: 10px;
+}
+/* Apartado para iniciar sesion */
+.create-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: rgb(230, 255, 255);
+    width: 100%;
+    border-radius: 3px;
+}
