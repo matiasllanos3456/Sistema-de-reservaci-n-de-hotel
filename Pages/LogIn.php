@@ -10,6 +10,8 @@
 </head>
 <body>
     <div class="login-container">
+        <!-- El contenido del formulario será enviado a un archivo que lo procese
+         y se almacenará en la variable global de $_POST -->
         <form action="../Process/ProcesarLogIn.php" method="post" class="form-login">
             <h1>Iniciar sesion</h1>
             <div class="input-container">
@@ -17,7 +19,7 @@
     
                 <label for="password">Password <input type="password" id="password" name="password" required></label>
                 <!-- Se debe validar la informacion ingresada en la BD -->
-                <button type="button" class="enter-button" onclick="location.href='Rooms.php'">Enter</button>
+                <input type="submit" class="enter-button" value="Enter" name="enviar">
             </div>
             <div class="create-container">
                 <h4>No tienes una cuenta? <a href="Registro.php">Crear cuenta</a></h4>
