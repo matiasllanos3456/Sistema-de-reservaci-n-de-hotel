@@ -48,11 +48,11 @@ if (isset($_POST['enviar'])) {
 
     // Si el usuario existe se guardaran sus datos en la variable superglobal $_SESSION
     session_regenerate_id(true);
-    $_SESSION["user_id"] = (int)$user["id"];
-    $_SESSION["user_name"] = $user["nombre"];
+    $_SESSION["user_id"] = (int)$user["IdCliente"];
+    $_SESSION["user_name"] = $user["Nombre"];
 
     // Redirigir
-    header("Location: Rooms.php");
+    header("Location: ../Pages/Rooms.php");
     exit;
 }
 
