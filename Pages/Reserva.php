@@ -36,12 +36,44 @@ $_SESSION["rooms"] = $rooms;
 	<ul>
 		<?php foreach ($rooms as $room): ?>
             <!-- Por cada habitacion se creará un div con la informacion de la habitacion -->
-			<li><?php echo htmlspecialchars($room, ENT_QUOTES, "UTF-8"); ?></li>
+            <!-- Se debe manda una query a la BD para mostrar la informacion de cada habitacion -->
+			<li>
+                <div class="room-container">
+                    <!-- Llamada a la BD -->
+                    <?php
+                        $query = "SELECT * FROM habitacion
+                                  WHERE Nombre = ?";
+                        $stmt = $conexion->prepare($query);
+                        if (!$stmt) {
+                            http_response_code(500);
+                            exit("Error en la consulta");
+                        }
+                        $stmt->bind_param("s", $room);
+                        $stmt->execute();
+
+                        $result = $stmt->get_result();
+                        $roomData = $result ? $result->fetch_assoc() : null;
+                    ?>
+                    <?php if ($roomData): ?>
+                        <div class="room-info">
+                            <!-- Aquí se mostraran las caracteristicas de cada habitacion -->
+                            <?php foreach ($roomData as $key => $value): ?>
+                                <p>
+                                    <strong><?php echo htmlspecialchars((string) $key, ENT_QUOTES, "UTF-8"); ?>:</strong>
+                                    <?php echo htmlspecialchars((string) $value, ENT_QUOTES, "UTF-8"); ?>
+                                </p>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php else: ?>
+                        <p>No se encontro informacion para la habitacion seleccionada.</p>
+                    <?php endif; ?>
+                </div>
+            </li>
 		<?php endforeach; ?>
 	</ul>
     <!-- Debe ser un formulario que envíe la informacion a ProcesarReserva.php -->
     <!-- Apartado de ajustes: fecha_inicio, fecha_termino, metodo de pago y cuotas -->
-    <form action="ProcesarReserva.php" method="post" class="form-reserva">
+    <form action="../Process/ProcesarReservacion.php" method="post" class="form-reserva">
         <div class="settings-container">
             <label>
               Inicio
@@ -62,7 +94,13 @@ $_SESSION["rooms"] = $rooms;
             <label for="opciones">Cuotas</label>
             <input type="text" class="cuotas" name="cuotas" placeholder="1" required>
         </div>
+        <div class="confirm-container">
+            <h3>El total a pagar es: </h3>
+            <input type="submit" name="enviar" value="Pagar" class="pay-button">
+        </div>
     </form>
+    <!-- Con la variable $rooms deberia tener acceso al id de la habitacion
+     pero me faltaria modificarlo en la pagina de Rooms.php -->
     <!-- Boton para finalizar reservacion -->
       <!-- Si todo sale bien, los datos serán enviados a la pagina de ConfirmacionReserva.php -->
 </body>

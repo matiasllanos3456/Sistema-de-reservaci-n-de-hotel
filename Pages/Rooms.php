@@ -33,7 +33,8 @@
                             <i class="fa-solid fa-dollar-sign" style="color: #1e3a8a;"></i>
                             <span>$6000</span>
                         </div>
-                        <input type="checkbox" class="check" name="rooms[]" value="matrimonial">
+                        <!-- El valor del input debe coincidir con el nombre de la habitacion en la BD -->
+                        <input type="checkbox" class="check" name="rooms[]" value="H_Matrimonial">
                     </div>
                 </div>
             </div>
@@ -53,7 +54,7 @@
                             <i class="fa-solid fa-dollar-sign" style="color: #1e3a8a;"></i>
                             <span>$12000</span>
                         </div>
-                        <input type="checkbox" class="check" name="rooms[]" value="deluxe">
+                        <input type="checkbox" class="check" name="rooms[]" value="H_Deluxe">
                     </div>
                 </div>
 
@@ -74,7 +75,7 @@
                             <i class="fa-solid fa-dollar-sign" style="color: #1e3a8a;"></i>
                             <span>$8500</span>
                         </div>
-                        <input type="checkbox" class="check" name="rooms[]" value="triple">
+                        <input type="checkbox" class="check" name="rooms[]" value="H_Triple">
                     </div>
                 </div>
             </div>
@@ -94,7 +95,7 @@
                             <i class="fa-solid fa-dollar-sign" style="color: #1e3a8a;"></i>
                             <span>$10000</span>
                         </div>
-                        <input type="checkbox" class="check" name="rooms[]" value="familiar">
+                        <input type="checkbox" class="check" name="rooms[]" value="H_Familiar">
                     </div>
                 </div>
             </div>
