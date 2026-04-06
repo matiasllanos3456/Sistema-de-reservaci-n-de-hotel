@@ -62,7 +62,7 @@ if ($totalPorNoche <= 0) {
 
 $totalReserva = $totalPorNoche * $nights;
 $totalReservaFormatted = number_format($totalReserva, 2, ".", "");
-
+$_SESSION["monto_total"] = $totalReservaFormatted;
 
 // Insertar datos: Reservacion -> HabitacionReservada -> Pago
 // Necesito el id del cliente para la reservacion
@@ -78,6 +78,9 @@ if (!$insert) {
 }
 $inicioStr = $inicio->format("Y-m-d H:i:s");
 $terminoStr = $termino->format("Y-m-d H:i:s");
+
+$_SESSION["inicio"] = $inicioStr;
+$_SESSION["fin"] = $terminoStr;
 
 // Para guardar fechas se deben pasar a string
 $insert->bind_param("ssi", $inicioStr, $terminoStr, $_SESSION["user_id"]);

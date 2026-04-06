@@ -23,7 +23,7 @@
                 </div>
                 <div class="description-container">
                     <h3>Habitacion matrimonial</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio nihil inventore autem dicta doloribus unde.</p>
+                    <p>Habitación matrimonial amplia y acogedora, equipada con cama doble, ropa de cama de calidad y espacio de guardado. Incluye baño privado, buena iluminación y ambiente tranquilo para un descanso cómodo. Ideal para parejas o viajes de descanso.</p>
                     <div class="icons-container">
                         <div class="icon-block">
                             <i class="fa-solid fa-bed" style="color: #1e3a8a;"></i>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="description-container">
                     <h3>Habitacion deluxe</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio nihil inventore autem dicta doloribus unde.</p>
+                    <p>Habitación cómoda y funcional con dos camas individuales, ropa de cama de calidad y espacio de guardado. Ambiente iluminado y tranquilo, ideal para amigos o viajes de trabajo.</p>
                     <div class="icons-container">
                         <div class="icon-block">
                             <i class="fa-solid fa-bed" style="color: #1e3a8a;"></i>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="description-container">
                     <h3>Habitacion triple</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio nihil inventore autem dicta doloribus unde.</p>
+                    <p>Habitación amplia con tres camas individuales, diseñada para grupos o familias. Cuenta con buena ventilación, ropa de cama de calidad y espacio de guardado para una estadía práctica y confortable.</p>
                     <div class="icons-container">
                         <div class="icon-block">
                             <i class="fa-solid fa-bed" style="color: #1e3a8a;"></i>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="description-container">
                     <h3>Habitacion familiar</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio nihil inventore autem dicta doloribus unde.</p>
+                    <p>Habitación espaciosa con cuatro camas, perfecta para familias o grupos grandes. Incluye ropa de cama de calidad, área de guardado y un ambiente cómodo para descansar después de un día de actividades.</p>
                     <div class="icons-container">
                         <div class="icon-block">
                             <i class="fa-solid fa-bed" style="color: #1e3a8a;"></i>

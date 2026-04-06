@@ -86,16 +86,16 @@ $_SESSION["rooms"] = $rooms;
             </label>
             <label for="opciones">Metodo de pago:</label>
             <select id="opciones" name="opciones">
-              <option value="opcion1">Debito</option>
-              <option value="opcion2">Credito</option>
-              <option value="opcion3">Transferencia</option>
+              <option value="Debito">Debito</option>
+              <option value="Credito">Credito</option>
+              <option value="Transferencia">Transferencia</option>
             </select>
 
             <label for="opciones">Cuotas</label>
             <input type="text" class="cuotas" name="cuotas" placeholder="1" required>
         </div>
         <div class="confirm-container">
-            <h3>El total a pagar es: </h3>
+            
             <input type="submit" name="enviar" value="Pagar" class="pay-button">
         </div>
     </form>

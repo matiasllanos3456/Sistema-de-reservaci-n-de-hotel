@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/Diseno-recepcion-hoteles-06.jpg");     
+    background-repeat: no-repeat;    
+    background-size: cover;            
+    background-position: center;       
+    background-attachment: fixed;
+}
+.confirm-container {
+    border: 2px solid #666;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    gap: 20px;
+    box-shadow: 5px 10px 20px #333;
+}
+label {
+    border-bottom: 1px dashed #333;
+}
+.back-button {
+	text-decoration: none;
+	color: #fff;
+	background: #1e3a8a;
+	padding: 10px 17px;
+	border-radius: 6px;
+	font-size: 14px;
+    max-width: 20%;
+}
+
+.back-button:hover {
+	background: #1b357c;
+}
