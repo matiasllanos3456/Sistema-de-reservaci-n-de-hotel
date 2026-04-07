@@ -17,9 +17,9 @@
                 <i class="fa-solid fa-gear fa-2xl" style="color: #1e3a8a;"></i>
             </button>
             <div class="gear-dropdown" id="gear-dropdown" role="menu">
-                <a href="GestionarReservas.php" role="menuitem">Gestionar reservas</a>
+                <a href="GestionarReservas.php" role="menuitem">Borrar reserva</a>
+                <a href="ActualizarUsuario.php" role="menuitem">Modificar datos</a>
             </div>
-            <!-- Falta agregar el apartado para actualizar los datos del usuario en sesion -->
         </div>
     </div>
     <!-- Las habitaciones seleccionadas serán validadas en la pagina de Reserva.php -->
