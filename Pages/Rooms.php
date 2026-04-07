@@ -12,7 +12,15 @@
     <div class="header">
         <a class="back-button" href="LogIn.php">Volver</a>
         <h1>Habitaciones</h1>
-        <i class="fa-solid fa-gear fa-2xl" style="color: #1e3a8a;" class="settings-button"></i>
+        <div class="gear-menu">
+            <button class="gear-button" type="button" aria-expanded="false" aria-controls="gear-dropdown">
+                <i class="fa-solid fa-gear fa-2xl" style="color: #1e3a8a;"></i>
+            </button>
+            <div class="gear-dropdown" id="gear-dropdown" role="menu">
+                <a href="GestionarReservas.php" role="menuitem">Gestionar reservas</a>
+            </div>
+            <!-- Falta agregar el apartado para actualizar los datos del usuario en sesion -->
+        </div>
     </div>
     <!-- Las habitaciones seleccionadas serán validadas en la pagina de Reserva.php -->
     <form action="../Pages/Reserva.php" method="post" id="rooms-form">
@@ -112,6 +120,29 @@
     <!-- Fuente de iconos -->
      <script src="https://kit.fontawesome.com/b9285facdc.js" crossorigin="anonymous"></script>
      <script>
+        const gearButton = document.querySelector(".gear-button");
+        const gearDropdown = document.querySelector(".gear-dropdown");
+
+        if (gearButton && gearDropdown) {
+            const closeDropdown = () => {
+                gearDropdown.classList.remove("is-open");
+                gearButton.setAttribute("aria-expanded", "false");
+            };
+
+            gearButton.addEventListener("click", (event) => {
+                event.stopPropagation();
+                const isOpen = gearDropdown.classList.toggle("is-open");
+                gearButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+
+            document.addEventListener("click", closeDropdown);
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    closeDropdown();
+                }
+            });
+        }
+
         const form = document.getElementById("rooms-form");
         const checks = Array.from(form.querySelectorAll(".check"));
         const submitBtn = form.querySelector(".boton-reservar");
